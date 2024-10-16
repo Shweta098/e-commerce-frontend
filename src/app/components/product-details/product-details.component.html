@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8" style="text-align: center;">
+            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/062.webp" alt="Chicago Skyscrapers"/>
+        </div>
+        <div class="col-4">
+            <h4 class="card-title">{{product.name}}</h4>
+            <p class="card-text">{{product.description}}</p>
+            <div *ngIf="product.availableQuantity>0">
+                <button class="button-1" role="button"  class="row" style="margin: 2rem;" (click)="addToCart()">Add to Cart</button>
+                <button class="button-1" role="button"  class="row" style="margin: 2rem;" (click)="goToCart()">Go to cart</button>
+            </div>
+            <div *ngIf="product.availableQuantity==0">
+                <h3 style="color: red;">Item out of stock</h3>
+            </div>
+        </div>
+    </div>
+</div>

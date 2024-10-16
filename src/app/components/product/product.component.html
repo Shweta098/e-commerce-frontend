@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row" >
+    <div class="card col-3" *ngFor="let product of products" style="color: pink; background-color: black; margin: 1rem;">
+        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/062.webp" class="card-img-top" alt="Chicago Skyscrapers"/>
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">{{product.description}}</p>
+        </div>
+        <ul class="list-group list-group-light list-group-small">
+          <!-- <li class="list-group-item px-4">Cras justo odio</li>
+          <li class="list-group-item px-4">Dapibus ac facilisis in</li> -->
+          <li class="list-group-item px-4">{{product.price | currency:'INR'}}</li>
+        </ul>
+        <div class="card-body" style="text-align: center;">
+          <!-- <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a> -->
+          <button class="button-1" role="button" (click)="getProductDetails(product.id)">Buy</button>
+        </div>
+      </div>
+  </div>
+</div>
